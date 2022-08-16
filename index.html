@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>今天吃什么</title>
+    <style>
+        #content1{
+            width: 600px;
+            height: 400px;
+            background:#F0FFF0;
+            margin: 100px auto;
+            text-align: center;
+            position: relative;
+        }   
+
+        #content2{
+            width: 300px;
+            height: 100px;
+            background-color: #E6E6FA;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom:90px;
+            text-align: center;
+            position: absolute;
+            line-height: 100px;
+            font-size:30px;
+        }
+		
+        #btn1{
+            background: rgb(1, 46, 4);
+			// background: #00FFFF;
+            width: 90px;
+            height: 40px;
+            font-size: 20px;
+            color: white;
+            border-radius: 12px;
+            position: absolute;
+			margin-left: -255px;
+			margin-top: 300px;
+            // bottom: 30px;
+            left: 50%;
+        }
+		
+		#btn2{
+            background: rgb(1, 46, 4);
+			// background: #00FFFF;
+            width: 90px;
+            height: 40px;
+            font-size: 20px;
+            color: white;
+            border-radius: 12px;
+            position: absolute;
+			margin-left: -115px;
+			margin-top: 300px;
+            // bottom: 30px;
+            left: 50%;
+        }
+		
+		#btn3{
+            background: rgb(1, 46, 4);
+			// background: #00FFFF;
+            width: 90px;
+            height: 40px;
+            font-size: 20px;
+            color: white;
+            border-radius: 12px;
+            position: absolute;
+			margin-left: 25px;
+			margin-top: 300px;
+            // bottom: 30px;
+            left: 50%;
+        }
+		
+		#btn4{
+            background: rgb(1, 46, 4);
+			// background: #00FFFF;
+            width: 90px;
+            height: 40px;
+            font-size: 20px;
+            color: white;
+            border-radius: 12px;
+            position: absolute;
+			margin-left: 165px;
+			margin-top: 300px;
+            // bottom: 30px;
+            left: 50%;
+        }
+		
+		#btn5{
+            background: rgb(1, 46, 4);
+			// background: #00FFFF;
+            width: 90px;
+            height: 40px;
+            font-size: 20px;
+            color: white;
+            border-radius: 12px;
+            position: absolute;
+			margin-left: 305px;
+			margin-top: 300px;
+            // bottom: 30px;
+            left: 50%;
+        }
+		
+    </style>
+</head>
+<body>
+    <div id="content1">
+        <div id="content2">
+            <span id="span">
+                随机点菜器
+            </span> 
+        </div>
+		<button id="btn1" name="btn" onclick="btnClick(1,zaocan,'早餐','btn1')">
+			早餐
+        </button>
+		<button id="btn2" name="btn" onclick="btnClick(2,zhengcan,'正餐','btn2')">
+            正餐
+        </button>
+		<button id="btn3" name="btn" onclick="btnClick(3,shucai,'蔬菜','btn3')">
+            蔬菜
+        </button>
+		<button id="btn4" name="btn" onclick="btnClick(4,tang,'喝汤','btn4')">
+            喝汤
+        </button>
+    </div>
+    <script>
+		// 正菜
+        var zhengcan = [
+		'辣椒炒肉','胡萝卜炒肉','白萝卜炒肉','土豆丝炒肉','土豆片炒肉','土豆片回锅肉','莴笋炒肉','杏鲍菇炒肉','西蓝花炒肉','花菜炒肉','豆角炒肉','四季豆炒肉',
+		'荷兰豆炒肉','茄子炒肉','苦瓜炒肉','豆腐泡炒肉','红烧肉','红烧排骨','水煮肉片','鱼香肉丝','酱大骨','烤肉','香芋扣肉','芥菜炒肉','猪肉炖粉条','芹菜炒肉',
+		'洋葱炒肉','莲藕炒肉','莲藕肉丸','莲藕肉饼','香干炒肉','香菇炒肉','小酥肉','蒜薹炒肉','一碗香','糯米蒸排骨','糯米猪肉丸','糯米蒸肉片','毛血旺','茭白炒肉',
+		'甜豆炒肉','玉米粒炒肉','冬瓜炒肉','蒜苗回锅肉',
+		'辣子鸡','土豆炖鸡','板栗炖鸡','辣椒炒鸡肉','黄焖鸡',
+		'黄焖鸭','小煎鸭','啤酒鸭','苦瓜烧鸭','血鸭','仔姜闷鸭',
+		'番茄牛腩','水煮牛肉','小炒牛肉','红烧牛肉','土豆炖牛肉','红酒烩牛肉','牛肉炒洋葱','牙签牛肉',
+		'香辣小龙虾','虾蟹一锅','油焖大虾','辣椒炒基围虾',
+		'水煮鱼片','清蒸鱼','剁椒鱼头','红烧鱼块','酸菜鱼','剁椒鱼头','鱼块炒辣椒',
+		'鸡蛋羹','火腿炒蛋','苦瓜炒蛋','土豆丝鸡蛋饼','黄瓜炒蛋','摊鸡蛋','苦瓜摊鸡蛋','番茄炒蛋','韭菜/韭黄炒蛋','青椒炒蛋','擂辣椒皮蛋','辣椒炒黄金蛋','剁椒炒蛋',
+		'辣椒炒皮蛋','猪血丸子','香肠','腊鸭脚','豆腐渣','','家常豆腐','凉拌邵阳香干',
+		];
+		
+		// 早餐
+		var zaocan = [
+		'水煮蛋','茶叶蛋','水煮面条','皮蛋瘦肉粥','杂粮粥','白粥','饺子','包子','酱香饼','拌面','炸酱面','热干面','腌面','邵阳粉','牛肉粉','汤粉',
+		'肠粉','炒米粉','炒河粉','炒面','炒饭','炒螺蛳粉','炒方便面','粽子','糯米鸡','烧麦','云吞','卤粉','鱼粉','重庆小面','凉皮','手抓饼','锅盔','肉夹馍',
+		'鸡蛋饼','煮玉米','煮红薯','馒头','花卷','香油粉'
+		];
+		
+		// 汤
+		var tang = [
+		'鲫鱼豆腐汤','骨头萝卜汤','鸡肉香菇汤','鱼头豆腐汤','老鸭冬瓜汤','猪肚鸡','西红柿蛋花汤','紫菜蛋花汤','金针菇肉末汤','平菇肉末汤','扇贝粉丝汤',
+		'蛤蜊冬瓜汤','猪蹄海带汤','猪蹄黄豆汤','丝瓜肉末汤','冬瓜肉丸汤','枸杞叶肉片汤','玉米骨头汤','山药骨头汤','莲藕骨头汤','莲藕猪蹄汤','菌类豆腐汤','青瓜皮蛋汤',
+		'黄骨鱼豆腐汤','清炖鸡汤',
+		];
+		
+		// 蔬菜
+		var shucai = [
+		'炒油麦菜','炒小白菜','手撕包菜','炒空心菜','炒莴笋丝','水煮四季豆','水煮豆角','炒娃娃菜','炒黄白菜','炒上海青','炒土豆丝','炒胡萝卜丝','炒豆芽',
+		'炒白萝卜丝','炒菠菜','炒生菜','炒西葫芦','炒丝瓜','炒冬瓜','炒菠菜','炒菜心','炒南瓜',
+		];
+	
+        // var btn = document.getElementById('btn1');
+        var content = document.getElementById('content');
+        var span = document.getElementById('span');
+		
+        var timer;//计时器
+        var testNum = true;
+		
+		function btnClick(id,name1,name2,type){
+		
+		var btn = document.getElementById(type);
+	
+		 if(testNum){
+                start(name1);
+                btn.innerHTML = '停止';
+                btn.style.backgroundColor = "";
+                testNum = false;
+            }
+            else{
+                stop();
+                btn.innerHTML = name2;
+                btn.style.backgroundColor ="";
+                testNum = true;
+            }
+		}
+		
+        function start(name){
+                timer = setInterval(function(){
+                    var num = random(0,name.length - 1);
+                    span.innerHTML = name[num];
+                },50)
+        }
+        function stop(){
+                clearInterval(timer);      
+        }
+        // 随机函数
+        function random(a,b){
+            var randomNum = Math.round(Math.random() * (b - a) + a);
+            return randomNum;
+        }        
+    </script>
+</body>
+</html>
+
